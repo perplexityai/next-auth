@@ -165,9 +165,7 @@ export async function getSession(params?: GetSessionParams) {
     logger,
     params
   )
-  if (params?.broadcast ?? true) {
-    broadcast.post({ event: "session", data: { trigger: "getSession" } })
-  }
+ 
   return session
 }
 
